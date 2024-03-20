@@ -13,13 +13,19 @@
   --navy-blue: #003EB7;
   --magnus-blue : #003D85;
   --cadmium-red : #B80027;
+  --bavarian-blue: #1A3578;
+  --pansy-purple: #73184B;
   --additional-blue: #1C3477;
   --additional-red: #B4022A;
 
   // градиенты
-  --main-gradient: linear-gradient(90deg, var(--additional-blue) 0%, var(--additional-red) 100%);
+  --main-gradient: linear-gradient(90deg, var(--additional-blue) 0.01%, var(--bavarian-blue) 39.106%, var(--pansy-purple) 75.502%, var(--additional-red) 100%);
   --secondary-gradient: linear-gradient(128.66deg, var(--secondary-red) 0%,var(--pacific-blue) 45.491%);
   --outline-gradient: linear-gradient(151.36deg, var(--base-red) 6.982%,var(--navy-blue) 116.498%);
+
+  // шрифты
+  --roboto: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  --alumni: "Alumni Sans", "Arial", "Helvetica", sans-serif;
 }
 
 // Размеры вьюпорта

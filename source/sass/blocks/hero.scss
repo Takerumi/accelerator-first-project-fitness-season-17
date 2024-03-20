@@ -1,5 +1,73 @@
 .hero {
+  padding-block-end: 32px;
   background: var(--main-gradient);
   background-color: var(--secondary-blue);
   color: var(--base-white);
+}
+
+.hero__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 16px;
+  margin-block-end: 48px;
+}
+
+.hero__phone {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.hero__description {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 22px;
+  row-gap: 48px;
+  align-items: flex-end;
+}
+.hero__services {
+  max-width: 113px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: right;
+}
+.hero__wrapper {
+  max-width: 155px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 14px;
+}
+.hero__city {
+  max-width: min-content;
+  margin: 0;
+  font-family: var(--alumni);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: right;
+}
+.hero__company {
+  max-width: min-content;
+  margin: 0;
+  font-family: var(--alumni);
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 62px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: right;
+}
+.hero__button {
+  width: 100%;
+}
+
+
+.button {
+}
+.button--light {
 }
