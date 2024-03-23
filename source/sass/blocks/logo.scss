@@ -1,6 +1,13 @@
+@use "../global/mixins" as mixin;
+
 .logo__picture {
   display: block;
   width: 100px;
   height: 20px;
   height: auto;
+
+  @include mixin.desktop {
+    width: 130px;
+    height: 26px;
+  }
 }
