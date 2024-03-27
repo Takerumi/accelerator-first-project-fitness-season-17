@@ -1,0 +1,42 @@
+@use "../global/mixins" as mixin;
+
+.about {
+  padding-block: 40px;
+}
+
+.about__wrapper {
+  margin-block-end: 36px;
+}
+
+.about h2 {
+  margin: 0;
+  margin-block-end: 12px;
+  font-family: var(--alumni);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.about strong {
+  display: block;
+  margin-block-end: 36px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.about p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.about p:not(:first-of-type) {
+  display: none;
+}
+
+.about__media img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  margin-block-end: 36px;
+}
