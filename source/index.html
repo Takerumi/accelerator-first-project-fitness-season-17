@@ -182,11 +182,11 @@
         <div class="container">
           <h2 class="visually-hidden">Мероприятия в ближайшее время.</h2>
           <div class="games__description">
-            <h3>SUPER GAMES</h3>
-            <p>Ежегодные соревнования по&nbsp;CrossFit</p>
+            <h3 class="games__title">SUPER GAMES</h3>
+            <p class="games__text">Ежегодные соревнования по&nbsp;CrossFit</p>
             <dl class="games__details">
               <dt>Дата</dt>
-              <dd><span>7</span>марта<br>2019</dd>
+              <dd><span>7</span>Марта<br>2019</dd>
               <dt>Время</dt>
               <dd><span>12:00</span></dd>
             </dl>
@@ -194,8 +194,12 @@
           </div>
           <div class="games__picture">
             <picture>
-              <source type="image/webp" srcset="img/games/games-photo@1x.webp, img/games/games-photo@2x.webp 2x">
-              <img src="img/games/games-photo@1x.jpg" srcset="img/games/games-photo@2x.jpg 2x" width="290" height="290" alt="SUPER GAMES - Ежегодные соревнования по CrossFit.">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/games/games-desktop@1x.webp, img/games/games-desktop@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/games/games-desktop@1x.jpg, img/games/games-desktop@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/games/games-tablet@1x.webp, img/games/games-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/games/games-tablet@1x.jpg, iimg/games/games-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/games/games-mobile@1x.webp, img/games/games-mobile@2x.webp 2x">
+              <img src="img/games/games-mobile@1x.jpg" srcset="img/games/games-mobile@2x.jpg 2x" width="290" height="290" alt="SUPER GAMES - Ежегодные соревнования по CrossFit.">
             </picture>
           </div>
         </div>
