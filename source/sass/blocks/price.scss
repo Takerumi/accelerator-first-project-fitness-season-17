@@ -1,0 +1,146 @@
+@use "../global/mixins" as mixin;
+
+.price {
+  padding-block: 40px;
+  background-color: var(--secondary-white);
+  text-align: center;
+}
+
+.price__title {
+  margin: 0;
+  margin-block-end: 30px;
+  font-family: var(--alumni);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.price__tabs {
+  list-style: none;
+  margin: 0;
+  margin-block-end: 30px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 45px;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::after {
+    @include mixin.pseudo(100%, 1px, rgba(120, 120, 120, 0.2));
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.price__button {
+  border: none;
+  background-color: transparent;
+  color: rgba(16, 38, 84, 0.5);
+  padding: 0;
+  padding-block-end: 18px;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+
+  &--active {
+    color: inherit;
+    border-bottom: 1px solid var(--secondary-red);
+    cursor: default;
+  }
+}
+
+.price__content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.price__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.price__item-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 35px;
+}
+
+.price__option {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  align-items: center;
+  padding-block: 50px;
+  padding-inline: 42px;
+  background-color: var(--base-white);
+}
+
+.price__option-title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.price__content-price {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.price__value {
+  display: flex;
+  column-gap: 10px;
+  margin-block-end: 9px;
+  font-size: 48px;
+  line-height: 150%;
+  font-weight: 700;
+  color: var(--base-accent);
+
+  &::before {
+    content: attr(data-price);
+    position: absolute;
+    display: block;
+    font-size: 80px;
+    line-height: 180%;
+    font-weight: 700;
+    color: var(--price-shadow);
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 48%;
+  }
+}
+
+.price__currency {
+  font-size: 48px;
+  line-height: 150%;
+  font-weight: 500;
+  color: var(--base-blue);
+}
+
+.price__content-link {
+  width: 195px;
+}
