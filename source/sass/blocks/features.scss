@@ -1,0 +1,86 @@
+@use "../global/mixins" as mixin;
+
+.features {
+  padding-block: 40px;
+  background-color: var(--secondary-white);
+}
+
+.features__title {
+  margin: 0;
+  margin-block-end: 40px;
+  font-family: var(--alumni);
+  text-align: center;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.features__list {
+  display: grid;
+  row-gap: 35px;
+  justify-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
+  padding-inline: 30px;
+  text-align: center;
+
+  &--special {
+    row-gap: 5px;
+    padding-block: 30px 40px;
+    padding-inline: 45px;
+    margin-inline: -15px;
+    margin-block: 5px;
+    background-color: var(--secondary-blue);
+    color: var(--base-white);
+  }
+}
+
+.features__item span {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 700;
+  background: var(--secondary-gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features__item--special span {
+  -webkit-text-fill-color: var(--base-white);
+}
+
+.features__item small {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--manchester-blue);
+}
+
+.features__item h3 {
+  margin: 0;
+  margin-block-end: 12px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.features__item--special h3 {
+  margin-block-end: 20px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.features__item p {
+  margin: 0;
+}
