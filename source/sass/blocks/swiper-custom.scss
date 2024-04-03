@@ -1,6 +1,11 @@
 .swiper {
   width: 227px;
   height: 280px;
+
+  &--reviews {
+    width: 240px;
+    height: auto;
+  }
 }
 
 .swiper-button {

@@ -1,0 +1,10 @@
+@use "../global/mixins" as mixin;
+
+.title {
+  margin: 0;
+  font-family: var(--alumni);
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+@use "../global/mixins" as mixin;
+
+.reviews {
+  padding-block: 40px;
+}
+
+.reviews__title {
+  margin-block-end: 40px;
+}
+
+.reviews__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__card {
+  width: 240px;
+  padding-block: 30px;
+  padding-inline: 25px;
+  background-color: var(--secondary-blue);
+  color: var(--base-white);
+  text-align: center;
+  position: relative;
+}
+
+.reviews img {
+  display: block;
+  width: 68px;
+  margin-inline: auto;
+  margin-block-end: 10px;
+  object-fit: cover;
+}
+
+.reviews div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.reviews h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.reviews p {
+  margin: 0;
+}

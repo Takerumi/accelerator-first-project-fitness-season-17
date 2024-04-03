@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import {Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
 
-const swiper = new Swiper('.swiper', {
+const swiperJuri = new Swiper('.swiper--juri', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 1,
@@ -21,6 +21,17 @@ const swiper = new Swiper('.swiper', {
       spaceBetween: 40
     }
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiperReviews = new Swiper('.swiper--reviews', {
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 20,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
