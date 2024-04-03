@@ -1,0 +1,40 @@
+@use "../global/mixins" as mixin;
+
+.form {
+  padding-block: 70px;
+  background-color: var(--base-blue);
+}
+
+.form__container {
+  width: 320px;
+  padding-inline: 15px;
+}
+
+.form__title {
+  color: var(--base-white);
+  text-align: left;
+  margin-block-end: 36px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+}
+
+.form__input {
+  width: 100%;
+  padding-block-end: 4px;
+  background-color: inherit;
+  color: var(--base-white);
+  font-family: var(--roboto);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  border: none;
+  border-bottom: 1px solid var(--underline-gray);
+}
+
+.form__button {
+  color: var(--base-white);
+}

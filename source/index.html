@@ -462,7 +462,20 @@
         </div>
       </section>
       <section class="form" data-test="form">
-
+        <div class="container form__container">
+          <h2 class="form__title title">Бесплатное занятие</h2>
+          <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
+            <div>
+              <label class="visually-hidden" for="name">Ваше имя.</label>
+              <input class="form__input" id="name" type="text" name="name" placeholder="Имя" required>
+            </div>
+            <div>
+              <label class="visually-hidden" for="phone">Ваш номер телефона.</label>
+              <input class="form__input" id="phone" type="text" name="phone" placeholder="Телефон" required>
+            </div>
+            <button class="form__button button">отправить</button>
+          </form>
+        </div>
       </section>
       <footer class="footer" data-test="footer">
 
