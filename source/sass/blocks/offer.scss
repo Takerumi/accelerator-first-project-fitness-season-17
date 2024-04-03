@@ -1,0 +1,132 @@
+@use "../global/mixins" as mixin;
+
+.offers {
+  padding-block: 40px;
+}
+
+.offers__container {
+  width: 320px;
+}
+
+.offers__title {
+  margin: 0;
+  margin-block-end: 40px;
+  font-family: var(--alumni);
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.offers__list {
+  display: grid;
+  justify-items: center;
+  row-gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.offers__item {
+  width: 276px;
+  padding-block: 20px;
+  padding-inline: 13px;
+  text-align: center;
+  background-color: var(--base-white);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    top: -7px;
+    left: -7px;
+    background-image: var(--outline-gradient);
+    z-index: -1;
+  }
+
+  &--special{
+    padding: 0;
+    width: 100%;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.offers__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+
+  &--special {
+    row-gap: 28px;
+    padding-block: 30px;
+    padding-inline: 30px;
+    background-color: var(--base-red);
+    color: var(--base-white);
+  }
+
+  &--special p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--special span {
+    display: block;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &--special span:first-child {
+    margin-block-end: 9px;
+  }
+
+  &--special span:nth-child(2) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.offers__item h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.offers__item p {
+  margin: 0;
+}
+
+.offer__picture {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.offers__link {
+  width: fit-content;
+  padding-block-end: 6px;
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+
+  &::after {
+    @include mixin.pseudo(72px, 1px, var(--underline-gray));
+    bottom: 0;
+    margin-inline: auto;
+  }
+}
+
+.offers__details--special .offers__link::after {
+  background-color: var(--base-white);
+}
