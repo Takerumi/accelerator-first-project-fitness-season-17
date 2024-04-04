@@ -1,0 +1,46 @@
+@use "../global/mixins" as mixin;
+
+.tabs__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-end: 35px;
+}
+
+.tabs__control {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  padding-block: 16px 14px;
+  padding-inline: 20px;
+  background-color: transparent;
+  color: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  border: 1px solid var(--opacity-blue);
+
+  &--active {
+    background: var(--outline-gradient);
+    color: var(--base-white);
+    border: none;
+  }
+}
+
+.tabs__content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs__element {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+

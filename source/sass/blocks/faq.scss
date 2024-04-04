@@ -1,0 +1,10 @@
+@use "../global/mixins" as mixin;
+
+.faq {
+  padding-block: 70px;
+  background-color: var(--secondary-white);
+}
+
+.faq__title {
+  margin-block-end: 35px;
+}

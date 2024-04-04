@@ -1,0 +1,78 @@
+@use "../global/mixins" as mixin;
+
+.accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion__element {
+  padding-block: 20px;
+  border-top: 1px solid var(--underline-gray);
+
+  &:last-child {
+    border-bottom: 1px solid var(--underline-gray);
+  }
+}
+
+.accordion__element p {
+  display: none;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.accordion__button {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.accordion__icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border: 1px solid var(--secondary-blue);
+  border-radius: 50%;
+  position: relative;
+
+  &::after,
+  &::before {
+    @include mixin.pseudo(14px, 1px, var(--secondary-blue));
+    top: 50%;
+    left: 50%;
+    transition: background-color 0.3s
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.accordion__element--active .accordion__icon {
+  background-color: var(--secondary-blue);
+
+  &::after {
+    content: none;
+  }
+
+  &::before {
+    background-color: var(--base-white);
+  }
+}
+
+.accordion__element--active p {
+  display: block;
+}
