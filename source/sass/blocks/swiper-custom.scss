@@ -8,6 +8,10 @@
     @include mixin.tablet {
       width: 560px;
     }
+
+    @include mixin.desktop {
+      width: 1160px;
+    }
   }
 
   &--reviews {
@@ -17,6 +21,10 @@
     @include mixin.tablet {
       width: 500px;
     }
+
+    @include mixin.desktop {
+      width: 560px;
+    }
   }
 }
 
@@ -25,17 +33,45 @@
 
   @include mixin.tablet {
     display: block;
-    width: 16px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
     margin: 0;
     padding: 0;
     border: none;
-    background-color: transparent;
-    background-image: url("../img/sprite/arrow.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+    border-radius: 50%;
     position: absolute;
     z-index: 2;
+    background-color: var(--base-white);
+
+    &::after {
+      @include mixin.pseudo(16px, 32px, var(--base-blue));
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      mask: url("../img/sprite/arrow.svg") no-repeat center;
+    }
+  }
+
+  &:hover {
+    border: 1px solid var(--base-blue);
+  }
+
+  &:focus {
+    background-color: var(--price-shadow);
+    border: 1px solid var(--base-blue);
+  }
+
+  &:active {
+    background-color: var(--base-blue);
+    border: 1px solid var(--base-blue);
+
+    &::after {
+      background-color: var(--base-white);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 

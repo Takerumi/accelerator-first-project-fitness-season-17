@@ -6,6 +6,10 @@
   @include mixin.tablet {
     padding-block: 60px;
   }
+
+  @include mixin.desktop {
+    border-top: 1px solid var(--underline-gray);
+  }
 }
 
 .contacts__title {
@@ -17,6 +21,10 @@
     line-height: 54px;
     margin-block-end: 36px;
     text-align: center;
+  }
+
+  @include mixin.desktop {
+    text-align: left;
   }
 }
 
@@ -33,6 +41,11 @@
     max-width: 440px;
     margin-inline: auto;
     gap: 15px 60px;
+  }
+
+  @include mixin.desktop {
+    max-width: 477px;
+    gap: 15px 120px;
   }
 
   &::after {

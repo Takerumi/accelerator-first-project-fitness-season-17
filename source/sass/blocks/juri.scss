@@ -6,6 +6,11 @@
   @include mixin.tablet {
     padding-block: 30px 60px;
   }
+
+  @include mixin.desktop {
+    grid-column: span 2;
+    padding-block: 100px;
+  }
 }
 
 .juri__container {
@@ -15,6 +20,10 @@
     max-width: 100%;
     position: relative;
   }
+
+  @include mixin.desktop {
+    width: 1272px;
+  }
 }
 
 .juri__title {
@@ -22,6 +31,11 @@
 
   @include mixin.tablet {
     margin-block-end: 46px;
+  }
+
+  @include mixin.desktop {
+    text-align: left;
+    padding-inline-start: 56px;
   }
 }
 
@@ -32,7 +46,22 @@
 }
 
 .juri__card {
+  display: grid;
+  grid-template-columns: minmax(10px, 1fr);
+  grid-template-rows: minmax(10px, 1fr);
+  align-items: flex-end;
+  justify-content: center;
   position: relative;
+  backface-visibility: hidden;
+
+  &:hover,
+  &:focus {
+    & .juri__info {
+      align-items: flex-start;
+      grid-template-rows: min-content;
+      padding-top: 52px;
+    }
+  }
 }
 
 .juri__photo {

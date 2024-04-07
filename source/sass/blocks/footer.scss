@@ -8,6 +8,11 @@
   @include mixin.tablet {
     padding-block: 45px;
   }
+
+  @include mixin.desktop {
+    grid-column: span 2;
+    padding-block: 40px;
+  }
 }
 
 .footer__wrapper {
@@ -36,6 +41,11 @@
   @include mixin.tablet {
     column-gap: 30px;
   }
+
+  @include mixin.desktop {
+    max-width: 600px;
+    column-gap: 82px;
+  }
 }
 
 .footer__nav-link,
@@ -51,11 +61,36 @@
   }
 }
 
+.footer__nav-link {
+  position: relative;
+
+  &:hover {
+    &::after {
+      @include mixin.pseudo(100%, 1px, var(--base-white));
+      left: 0;
+      bottom: -5px;
+    }
+  }
+
+  &:focus {
+    outline: 1px solid var(--base-white);
+    outline-offset: 5px;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
 .footer__socials {
   gap: 20px;
 
   @include mixin.tablet {
     column-gap: 15px;
+  }
+
+  @include mixin.desktop {
+    column-gap: 10px;
   }
 }
 
@@ -82,5 +117,33 @@
 
   &--reddit::after {
     mask: url("../img/sprite/reddit.svg") no-repeat center;
+  }
+
+  &:hover {
+    background-color: var(--underline-gray);
+
+    &::after {
+      background-color: var(--base-white);
+    }
+  }
+
+  &:focus {
+    background-color: var(--base-accent);
+
+    &::after {
+      background-color: var(--base-white);
+    }
+  }
+
+  &:active {
+    background-color: var(--base-blue);
+
+    &::after {
+      background-color: var(--base-white);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }

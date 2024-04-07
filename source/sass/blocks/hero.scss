@@ -11,6 +11,7 @@
   }
 
   @include mixin.desktop {
+    grid-column: span 2;
     padding-block-end: 120px;
   }
 }
@@ -38,6 +39,7 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
+  position: relative;
 
   @include mixin.tablet {
     font-size: 24px;
@@ -47,6 +49,26 @@
   @include mixin.desktop {
     font-size: 26px;
     line-height: 26px;
+  }
+
+  &:hover {
+    color: rgba(28, 51, 116, 0.5);
+  }
+
+  &:focus {
+    color: var(--secondary-blue);
+  }
+
+  &:active {
+    color: var(--base-blue);
+
+    &::after {
+      @include mixin.pseudo(100%, 1px, var(--base-blue));
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }
 

@@ -18,6 +18,10 @@
     row-gap: 10px;
   }
 
+  @include mixin.desktop {
+    padding-block: 23px;
+  }
+
   &:last-child {
     border-bottom: 1px solid var(--underline-gray);
   }
@@ -27,6 +31,11 @@
   display: none;
   font-size: 16px;
   line-height: 20px;
+
+  @include mixin.desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .accordion__button {
@@ -53,6 +62,11 @@
     @include mixin.tablet {
       max-width: 500px;
     }
+
+    @include mixin.desktop {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -70,6 +84,19 @@
     height: 40px;
   }
 
+  &:hover {
+    background-color: var(--base-blue);
+  }
+
+  &:focus {
+    background-color: var(--underline-gray);
+    border: 1px solid var(--base-blue);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &::after,
   &::before {
     @include mixin.pseudo(14px, 1px, var(--secondary-blue));
@@ -81,6 +108,16 @@
     @include mixin.tablet {
       width: 20px;
     }
+  }
+
+  &:hover::after,
+  &:hover::before {
+    background-color: var(--base-white);
+  }
+
+  &:focus::after,
+  &:focus::before {
+    background-color: var(--base-white);
   }
 
   &::after {
@@ -112,5 +149,9 @@
     padding-inline-end: 110px;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @include mixin.desktop {
+    padding-inline-end: 198px;
   }
 }

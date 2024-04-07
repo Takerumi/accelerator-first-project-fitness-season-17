@@ -6,6 +6,11 @@
   @include mixin.tablet {
     padding-block: 60px;
   }
+
+  @include mixin.desktop {
+    grid-column: span 2;
+    padding-block: 100px;
+  }
 }
 
 .reviews__title {
@@ -15,6 +20,10 @@
     font-size: 54px;
     line-height: 54px;
     margin-block-end: 35px;
+  }
+
+  @include mixin.desktop {
+    margin-block-end: 75px;
   }
 }
 
