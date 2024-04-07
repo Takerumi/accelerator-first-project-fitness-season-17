@@ -5,6 +5,10 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-block-end: 35px;
+
+  @include mixin.tablet {
+    margin-block-end: 45px;
+  }
 }
 
 .tabs__control {
@@ -19,6 +23,13 @@
   line-height: 16px;
   font-weight: 400;
   border: 1px solid var(--opacity-blue);
+
+  @include mixin.tablet {
+    flex-grow: 1;
+    padding-block: 18px;
+    font-size: 18px;
+    line-height: 18px;
+  }
 
   &--active {
     background: var(--outline-gradient);
@@ -43,4 +54,3 @@
     display: block;
   }
 }
-

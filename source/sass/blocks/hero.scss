@@ -24,6 +24,7 @@
 
   @include mixin.tablet {
     margin-block-end: 0;
+    padding-block: 30px;
   }
 
   @include mixin.desktop {
@@ -99,6 +100,7 @@
     line-height: 22px;
   }
 }
+
 .hero__info {
   max-width: 155px;
   display: flex;

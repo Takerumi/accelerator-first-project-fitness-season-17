@@ -1,13 +1,55 @@
+@use "../global/mixins" as mixin;
+
 .swiper {
-  width: 227px;
-  height: 280px;
+  &--juri {
+    width: 227px;
+    height: 280px;
+
+    @include mixin.tablet {
+      width: 560px;
+    }
+  }
 
   &--reviews {
     width: 240px;
     height: auto;
+
+    @include mixin.tablet {
+      width: 500px;
+    }
   }
 }
 
 .swiper-button {
   display: none;
+
+  @include mixin.tablet {
+    display: block;
+    width: 16px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/sprite/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+.swiper-button-prev {
+  @include mixin.tablet {
+    left: 0;
+    top: 234px;
+  }
+}
+
+.swiper-button-next {
+  @include mixin.tablet {
+    right: 0;
+    top: 234px;
+    transform: rotate(180deg);
+  }
 }

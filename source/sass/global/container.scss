@@ -2,15 +2,16 @@
 
 .container {
   box-sizing: border-box;
-  width: 290px;
+  width: calc(100% - 30px);
   margin-inline: auto;
   position: relative;
 
   @include mixin.tablet {
-    width: 678px;
+    width: calc(100% - 90px);
   }
 
   @include mixin.desktop {
-    width: 1160px;
+    width: calc(100% - 206px);
+    max-width: 1366px;
   }
 }

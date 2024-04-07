@@ -3,10 +3,19 @@
 .features {
   padding-block: 40px;
   background-color: var(--secondary-white);
+
+  @include mixin.tablet {
+    padding-block: 60px;
+  }
 }
 
 .features__title {
   margin-block-end: 40px;
+
+  @include mixin.tablet {
+    margin-block-end: 50px;
+    padding-inline: 50px;
+  }
 }
 
 .features__list {
@@ -16,6 +25,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include mixin.tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
 }
 
 .features__item {
@@ -26,6 +40,13 @@
   padding-inline: 30px;
   text-align: center;
 
+  @include mixin.tablet {
+    flex-direction: row;
+    column-gap: 14px;
+    padding-inline: 0;
+    text-align: left;
+  }
+
   &--special {
     row-gap: 5px;
     padding-block: 30px 40px;
@@ -34,6 +55,16 @@
     margin-block: 5px;
     background-color: var(--secondary-blue);
     color: var(--base-white);
+
+    @include mixin.tablet {
+      max-width: 320px;
+      flex-direction: column;
+      grid-column: span 2;
+      row-gap: 25px;
+      padding: 35px;
+      margin: 0;
+      text-align: center;
+    }
   }
 }
 
@@ -47,6 +78,11 @@
   background: var(--secondary-gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @include mixin.tablet {
+    font-size: 70px;
+    line-height: 70px;
+  }
 }
 
 .features__item--special span {
@@ -58,6 +94,10 @@
   line-height: 20px;
   font-weight: 400;
   color: var(--manchester-blue);
+
+  @include mixin.tablet {
+    line-height: 22px;
+  }
 }
 
 .features__item h3 {
@@ -66,6 +106,10 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
+
+  @include mixin.tablet {
+    font-size: 20px;
+  }
 }
 
 .features__item--special h3 {
@@ -73,6 +117,12 @@
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
+
+  @include mixin.tablet {
+    margin-block-end: 25px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .features__item p {

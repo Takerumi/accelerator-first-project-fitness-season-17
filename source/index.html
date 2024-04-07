@@ -11,10 +11,10 @@
   <body class="page-body">
     <div class="visually-hidden">
       <!-- пример использования спрайта -->
-      <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-      <svg>
-        <use href="/__spritemap#sprite-user"></use>
-      </svg>
+      <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт"> -->
+      <!-- <svg> -->
+        <!-- <use href="/__spritemap#sprite-user"></use> -->
+      <!-- </svg> -->
     </div>
     <main>
       <section class="hero" data-test="hero">
@@ -23,7 +23,7 @@
             <div class="hero__logo logo logo--header">
               <img class="logo__picture" src="img/logo.svg" width="100" height="20" alt="Текстовый логотип SUPERGYM.">
             </div>
-            <a href="" class="hero__phone">8 800 555-55-55</a>
+            <a class="hero__phone" href="tel:+78005555555">8 800 555-55-55</a>
           </header>
           <h1 class="visually-hidden">Фитнес-центр SUPERGYM: сделай первый шаг к своему идеальному телу!</h1>
           <div class="hero__wrapper">
@@ -37,13 +37,13 @@
                 <p class="hero__city">Омск</p>
                 <p class="hero__company">Фитнес центр</p>
               </div>
-              <button class="hero__button button">Купить абонемент</button>
+              <button class="hero__button button" type="button">Купить абонемент</button>
             </div>
             <div class="hero__image">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/hero-desktop@1x.webp 1x, img/hero/hero-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/hero/hero-tablet@1x.webp 1x, img/hero/hero-tablet@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="img/hero/hero-desktop@1x.jpg 1x, img/hero/hero-desktop@2x.jpg 2x">
+                <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/hero/hero-desktop@1x.jpg 1x, img/hero/hero-desktop@2x.jpg 2x">
                 <img src="img/hero/hero-tablet@1x.jpg" srcset="img/hero/hero-tablet@2x.jpg 2x" width="324" height="390" alt="Подкачанный мужчина в футболке с эмблемой Супермена.">
               </picture>
             </div>
@@ -53,32 +53,32 @@
       <section class="about" data-test="about">
         <div class="container">
           <div class="about__wrapper">
-            <h2>Тренажерный зал</h2>
+            <h2 class="about__title title">Тренажерный зал</h2>
             <strong>Просторный зал площадью 900 кв/м</strong>
-            <p>Supergym – самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для&nbsp;укрепления тела и&nbsp;здоровья. Тренажёрный зал&nbsp;оснащён всем необходимым современным оборудованием для&nbsp;всех спортсменов.
+            <p>Supergym – самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажёрный зал&nbsp;оснащён всем необходимым современным оборудованием для&nbsp;всех спортсменов.
             </p>
             <p>В&nbsp;зале расположены отдельная зона для&nbsp;Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажёрами. Также&nbsp;в&nbsp;фитнес центре есть&nbsp;несколько оборудованных залов для&nbsp;различных видов групповых занятий.</p>
           </div>
         </div>
         <div class="about__media">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/about/gym-photo-desktop@1x.webp, iimg/about/gym-photo-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/about/gym-photo-desktop@1x.webp, img/about/gym-photo-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/about/gym-photo-tablet@1x.webp, img/about/gym-photo-tablet@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/about/gym-photo-desktop@1x.jpg, img/about/gym-photo-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/about/gym-photo-tablet@1x.jpg, img/about/gym-photo-tablet@2x.jpg 2x">
+            <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/about/gym-photo-desktop@1x.jpg, img/about/gym-photo-desktop@2x.jpg 2x">
+            <source type="image/jpeg" media="(min-width: 768px)" srcset="img/about/gym-photo-tablet@1x.jpg, img/about/gym-photo-tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/about/gym-photo-mobile@1x.webp 1x, img/about/gym-photo-mobile@2x.webp 2x">
             <img src="img/about/gym-photo-mobile@1x.jpg" srcset="img/about/gym-photo-mobile@2x.jpg 2x" width="320" height="280" alt="Интерьер и тренажеры нашего фитнес центра.">
           </picture>
-        </div>
-        <div class="about__video">
-          <a class="about__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
-            <span class="visually-hidden">Воспроизвести видео.</span>
-            <span class="about__play-btn"></span>
-          </a>
+          <div class="about__video">
+            <a class="about__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
+              <span class="visually-hidden">Воспроизвести видео.</span>
+              <span class="about__play-btn"></span>
+            </a>
+          </div>
         </div>
       </section>
       <section class="price" data-test="price">
-        <div class="container">
+        <div class="price__container container">
           <h2 class="price__title title">Абонементы</h2>
           <ul class="price__tabs">
             <li class="price__tab">
@@ -101,7 +101,7 @@
                     <div class="price__content-price">
                       <span class="price__value" data-price="5000">5000<span class="price__currency">₽</span></span>
                     </div>
-                    <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                    <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
                 <li class="price__option" tabindex="0">
                   <h4 class="price__option-title">Дневной</h4>
@@ -109,7 +109,7 @@
                     <div class="price__content-price">
                       <span class="price__value" data-price="1700">1700<span class="price__currency">₽</span></span>
                     </div>
-                    <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                    <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
                 <li class="price__option" tabindex="0">
                   <h4 class="price__option-title">Полный день</h4>
@@ -117,7 +117,7 @@
                   <div class="price__content-price">
                     <span class="price__value" data-price="2700">2700<span class="price__currency">₽</span></span>
                   </div>
-                  <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                  <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
               </ul>
             </li>
@@ -130,7 +130,7 @@
                     <div class="price__content-price">
                       <span class="price__value" data-price="25000">25000<span class="price__currency">₽</span></span>
                     </div>
-                    <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                    <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
                 <li class="price__option" tabindex="0">
                   <h4 class="price__option-title">Дневной</h4>
@@ -138,7 +138,7 @@
                     <div class="price__content-price">
                       <span class="price__value" data-price="8700">8700<span class="price__currency">₽</span></span>
                     </div>
-                    <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                    <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
                 <li class="price__option" tabindex="0">
                   <h4 class="price__option-title">Полный день</h4>
@@ -146,7 +146,7 @@
                   <div class="price__content-price">
                     <span class="price__value" data-price="14700">14700<span class="price__currency">₽</span></span>
                   </div>
-                  <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                  <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
               </ul>
             </li>
@@ -159,7 +159,7 @@
                     <div class="price__content-price">
                       <span class="price__value" data-price="55000">55000<span class="price__currency">₽</span></span>
                     </div>
-                    <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                    <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
                 <li class="price__option" tabindex="0">
                   <h4 class="price__option-title">Дневной</h4>
@@ -167,7 +167,7 @@
                     <div class="price__content-price">
                       <span class="price__value" data-price="17000">17000<span class="price__currency">₽</span></span>
                     </div>
-                    <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                    <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
                 <li class="price__option" tabindex="0">
                   <h4 class="price__option-title">Полный день</h4>
@@ -175,7 +175,7 @@
                   <div class="price__content-price">
                     <span class="price__value" data-price="27000">27000<span class="price__currency">₽</span></span>
                   </div>
-                  <a href="#" class="price__content-link button button--dark">Купить абонемент</a>
+                  <a class="price__content-link button button--dark" href="#">Купить абонемент</a>
                 </li>
               </ul>
             </li>
@@ -185,32 +185,37 @@
       <section class="games" data-test="games">
         <div class="container">
           <h2 class="visually-hidden">Мероприятия в ближайшее время.</h2>
-          <div class="games__description">
-            <h3 class="games__title title">SUPER GAMES</h3>
-            <p class="games__text">Ежегодные соревнования по&nbsp;CrossFit</p>
-            <dl class="games__details">
-              <dt>Дата</dt>
-              <dd><span>7</span>Марта<br>2019</dd>
-              <dt>Время</dt>
-              <dd><span>12:00</span></dd>
-            </dl>
-            <a class="games__button button" href="#">заполнить заявку</a>
-          </div>
-          <div class="games__picture">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)" srcset="img/games/games-desktop@1x.webp, img/games/games-desktop@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/games/games-desktop@1x.jpg, img/games/games-desktop@2x.jpg 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/games/games-tablet@1x.webp, img/games/games-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/games/games-tablet@1x.jpg, iimg/games/games-tablet@2x.jpg 2x">
-              <source type="image/webp" srcset="img/games/games-mobile@1x.webp, img/games/games-mobile@2x.webp 2x">
-              <img src="img/games/games-mobile@1x.jpg" srcset="img/games/games-mobile@2x.jpg 2x" width="290" height="290" alt="SUPER GAMES - Ежегодные соревнования по CrossFit.">
-            </picture>
+          <div class="games__wrapper">
+            <div class="games__description">
+              <h3 class="games__title title">SUPER GAMES</h3>
+              <p class="games__text">Ежегодные соревнования по CrossFit</p>
+              <dl class="games__details">
+                <dt>Дата</dt>
+                <dd><span>7</span>Марта<br>2019</dd>
+                <dt>Время</dt>
+                <dd><span>12:00</span></dd>
+              </dl>
+              <a class="games__button button" href="#">заполнить заявку</a>
+            </div>
+            <div class="games__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/games/games-desktop@1x.webp, img/games/games-desktop@2x.webp 2x">
+                <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/games/games-desktop@1x.jpg, img/games/games-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/games/games-tablet@1x.webp, img/games/games-tablet@2x.webp 2x">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="img/games/games-tablet@1x.jpg, img/games/games-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/games/games-mobile@1x.webp, img/games/games-mobile@2x.webp 2x">
+                <img src="img/games/games-mobile@1x.jpg" srcset="img/games/games-mobile@2x.jpg 2x" width="290" height="290" alt="SUPER GAMES - Ежегодные соревнования по CrossFit.">
+              </picture>
+            </div>
           </div>
         </div>
       </section>
       <section class="juri" data-test="juri">
         <div class="container juri__container">
           <h2 class="juri__title title">Жюри</h2>
+          <button class="swiper-button swiper-button-prev" type="button">
+            <span class="visually-hidden">Перейти к предыдущему слайду.</span>
+          </button>
           <div class="swiper swiper--juri">
             <ul class="swiper-wrapper juri__list">
               <li class="swiper-slide juri__card" tabindex="0">
@@ -334,9 +339,10 @@
                 </div>
               </li>
             </ul>
-            <button class="swiper-button swiper-button-prev" type="button"></button>
-            <button class="swiper-button swiper-button-next" type="button"></button>
           </div>
+          <button class="swiper-button swiper-button-next" type="button">
+            <span class="visually-hidden">Перейти к следующему слайду.</span>
+          </button>
         </div>
       </section>
       <section class="features" data-test="features">
@@ -361,7 +367,7 @@
               <span>100</span>
               <div>
                 <h3>Тренажёров</h3>
-                <p>Современные тренажёры на все&nbsp;группы мышц</p>
+                <p>Современные тренажёры на все группы мышц</p>
               </div>
             </li>
             <li class="features__item">
@@ -399,9 +405,9 @@
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/offers/offer-special-desktop@1x.webp, img/offers/offer-special-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/offers/offer-special-tablet@1x.webp, img/offers/offer-special-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/offers/offer-special-mobile@1x.webp, img/offers/offer-special-mobile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="img/offers/offer-special-desktop@1x.jpg, img/offers/offer-special-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/offers/offer-special-tablet@1x.jpg, img/offers/offer-special-tablet@2x.jpg 2x">
-                <img class="offer__picture" src="img/offers/offer-special-mobile@1x.jpg" srcset="img/offers/offer-special-mobile@2x.jpg 2x" width="320" height="360" alt="Красивая девушка в спортивной форме.">
+                <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/offers/offer-special-desktop@1x.jpg, img/offers/offer-special-desktop@2x.jpg 2x">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="img/offers/offer-special-tablet@1x.jpg, img/offers/offer-special-tablet@2x.jpg 2x">
+                <img class="offers__picture" src="img/offers/offer-special-mobile@1x.jpg" srcset="img/offers/offer-special-mobile@2x.jpg 2x" width="320" height="360" alt="Красивая девушка в спортивной форме.">
               </picture>
             </li>
             <li class="offers__item">
@@ -457,7 +463,7 @@
                   </li>
                   <li class="accordion__element">
                     <button class="accordion__button" type="button">
-                      <span>Сколько тренеров работает в клубе и какова их квалификация?</span>
+                      <span>Сколько тренеров работает в клубе и какова их&nbsp;квалификация?</span>
                       <span class="accordion__icon"></span>
                     </button>
                     <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
@@ -567,6 +573,9 @@
       <section class="reviews" data-test="reviews">
         <div class="container">
           <h2 class="reviews__title title">Отзывы</h2>
+          <button class="swiper-button swiper-button-prev" type="button">
+            <span class="visually-hidden">Перейти к предыдущему слайду.</span>
+          </button>
           <div class="swiper swiper--reviews">
             <ul class="swiper-wrapper reviews__list">
               <li class="swiper-slide reviews__card" tabindex="0">
@@ -600,9 +609,10 @@
                 </div>
               </li>
             </ul>
-            <button class="swiper-button swiper-button-prev" type="button"></button>
-            <button class="swiper-button swiper-button-next" type="button"></button>
           </div>
+          <button class="swiper-button swiper-button-next" type="button">
+            <span class="visually-hidden">Перейти к следующему слайду.</span>
+          </button>
         </div>
       </section>
       <section class="form" data-test="form">
@@ -617,7 +627,7 @@
               <label class="visually-hidden" for="phone">Ваш номер телефона.</label>
               <input class="form__input" id="phone" type="text" name="phone" placeholder="Телефон" required>
             </div>
-            <button class="form__button button">отправить</button>
+            <button class="form__button button" type="submit">отправить</button>
           </form>
         </div>
       </section>

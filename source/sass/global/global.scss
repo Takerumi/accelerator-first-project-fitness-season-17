@@ -1,4 +1,8 @@
-*, ::after, ::before {
+@use "../global/mixins" as mixin;
+
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -20,4 +24,9 @@ body {
   color: var(--base-blue);
   position: relative;
   scrollbar-gutter: stable;
+
+  @include mixin.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

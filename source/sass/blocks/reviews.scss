@@ -2,10 +2,20 @@
 
 .reviews {
   padding-block: 40px;
+
+  @include mixin.tablet {
+    padding-block: 60px;
+  }
 }
 
 .reviews__title {
   margin-block-end: 40px;
+
+  @include mixin.tablet {
+    font-size: 54px;
+    line-height: 54px;
+    margin-block-end: 35px;
+  }
 }
 
 .reviews__list {
@@ -22,6 +32,12 @@
   color: var(--base-white);
   text-align: center;
   position: relative;
+
+  @include mixin.tablet {
+    display: flex;
+    padding-inline: 30px;
+    padding-block: 40px;
+  }
 }
 
 .reviews img {
@@ -30,19 +46,24 @@
   margin-inline: auto;
   margin-block-end: 10px;
   object-fit: cover;
-}
 
-.reviews div {
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
+  @include mixin.tablet {
+    margin: 0;
+  }
 }
 
 .reviews h3 {
   margin: 0;
+  margin-block-end: 16px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
+
+  @include mixin.tablet {
+    margin-block-end: 20px;
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
 
 .reviews p {

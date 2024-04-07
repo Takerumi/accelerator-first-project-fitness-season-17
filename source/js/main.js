@@ -1,5 +1,4 @@
 import Swiper from "swiper";
-import {Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
 
 const swiperJuri = new Swiper('.swiper--juri', {
@@ -14,7 +13,7 @@ const swiperJuri = new Swiper('.swiper--juri', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 30
+      spaceBetween: 40
     },
     1200: {
       slidesPerView: 4,

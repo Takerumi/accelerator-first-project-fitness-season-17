@@ -7,8 +7,16 @@
 }
 
 .accordion__element {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   padding-block: 20px;
   border-top: 1px solid var(--underline-gray);
+
+  @include mixin.tablet {
+    padding-block: 25px;
+    row-gap: 10px;
+  }
 
   &:last-child {
     border-bottom: 1px solid var(--underline-gray);
@@ -33,6 +41,19 @@
   line-height: 20px;
   font-weight: 400;
   text-align: left;
+
+  @include mixin.tablet {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  & span {
+    @include mixin.tablet {
+      max-width: 500px;
+    }
+  }
 }
 
 .accordion__icon {
@@ -44,12 +65,22 @@
   border-radius: 50%;
   position: relative;
 
+  @include mixin.tablet {
+    width: 40px;
+    height: 40px;
+  }
+
   &::after,
   &::before {
     @include mixin.pseudo(14px, 1px, var(--secondary-blue));
+
     top: 50%;
     left: 50%;
-    transition: background-color 0.3s
+    transition: background-color 0.3s;
+
+    @include mixin.tablet {
+      width: 20px;
+    }
   }
 
   &::after {
@@ -75,4 +106,11 @@
 
 .accordion__element--active p {
   display: block;
+  margin: 0;
+
+  @include mixin.tablet {
+    padding-inline-end: 110px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

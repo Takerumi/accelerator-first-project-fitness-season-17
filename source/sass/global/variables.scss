@@ -1,32 +1,32 @@
 :root {
   // цвета
-  --base-white: #FFFFFF;
-  --secondary-white: #F8F9FC;
+  --base-white: #ffffff;
+  --secondary-white: #f8f9fc;
   --base-blue: #102654;
-  --secondary-blue: #1C3374;
-  --base-black: #030A1A;
-  --base-accent: #103AAE;
-  --base-red: #ED0233;
-  --secondary-red: #D10A42;
-  --error-red: #FF121F;
-  --pacific-blue: #0041CA;
-  --navy-blue: #003EB7;
-  --magnus-blue : #003D85;
-  --cadmium-red : #B80027;
-  --bavarian-blue: #1A3578;
-  --pansy-purple: #73184B;
-  --additional-blue: #1C3477;
-  --additional-red: #B4022A;
-  --price-shadow: #E8E8E8;
-  --manchester-blue: #2E35AC;
-  --underline-gray: #74819C;
+  --secondary-blue: #1c3374;
+  --base-black: #030a1a;
+  --base-accent: #103aae;
+  --base-red: #ed0233;
+  --secondary-red: #d10a42;
+  --error-red: #ff121f;
+  --pacific-blue: #0041ca;
+  --navy-blue: #003eb7;
+  --magnus-blue: #003d85;
+  --cadmium-red: #b80027;
+  --bavarian-blue: #1a3578;
+  --pansy-purple: #73184b;
+  --additional-blue: #1c3477;
+  --additional-red: #b4022a;
+  --price-shadow: #e8e8e8;
+  --manchester-blue: #2e35ac;
+  --underline-gray: #74819c;
   --hover-overlay: rgba(16, 38, 84, 0.89);
   --opacity-blue: rgba(16, 38, 84, 0.2);
 
   // градиенты
-  --main-gradient: linear-gradient(90deg, var(--additional-blue) 0.01%, var(--bavarian-blue) 39.106%, var(--pansy-purple) 75.502%, var(--additional-red) 100%);
-  --secondary-gradient: linear-gradient(128.66deg, var(--secondary-red) 0%,var(--pacific-blue) 44%);
-  --outline-gradient: linear-gradient(151.36deg, var(--base-red) 6.982%,var(--navy-blue) 116.498%);
+  --main-gradient: linear-gradient(90deg, var(--additional-blue) 0.01%, var(--bavarian-blue) 39.11%, var(--pansy-purple) 75.5%, var(--additional-red) 100%);
+  --secondary-gradient: linear-gradient(128.66deg, var(--secondary-red) 0%, var(--pacific-blue) 44%);
+  --outline-gradient: linear-gradient(151.36deg, var(--base-red) 6.98%, var(--navy-blue) 116.5%);
 
   // шрифты
   --roboto: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
@@ -36,5 +36,6 @@
 // Размеры вьюпорта
 $tablet-width: 768px;
 $desktop-width: 1366px;
+
 // Точки на пиксель
 $retina-dppx: 2dppx;

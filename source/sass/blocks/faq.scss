@@ -3,8 +3,16 @@
 .faq {
   padding-block: 70px;
   background-color: var(--secondary-white);
+
+  @include mixin.tablet {
+    padding-block: 60px;
+  }
 }
 
 .faq__title {
   margin-block-end: 35px;
+
+  @include mixin.tablet {
+    margin-block-end: 45px;
+  }
 }

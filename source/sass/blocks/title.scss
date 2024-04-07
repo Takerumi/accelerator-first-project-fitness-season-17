@@ -7,4 +7,9 @@
   line-height: 32px;
   font-weight: 600;
   text-align: center;
+
+  @include mixin.tablet {
+    font-size: 42px;
+    line-height: 42px;
+  }
 }

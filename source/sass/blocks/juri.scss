@@ -2,14 +2,27 @@
 
 .juri {
   padding-block: 40px;
+
+  @include mixin.tablet {
+    padding-block: 30px 60px;
+  }
 }
 
 .juri__container {
   max-width: 227px;
+
+  @include mixin.tablet {
+    max-width: 100%;
+    position: relative;
+  }
 }
 
 .juri__title {
   margin-block-end: 20px;
+
+  @include mixin.tablet {
+    margin-block-end: 46px;
+  }
 }
 
 .juri__list {

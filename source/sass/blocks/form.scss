@@ -3,18 +3,36 @@
 .form {
   padding-block: 70px;
   background-color: var(--base-blue);
+
+  @include mixin.tablet {
+    padding-block: 60px;
+  }
 }
 
 .form__title {
   color: var(--base-white);
   text-align: left;
   margin-block-end: 36px;
+
+  @include mixin.tablet {
+    font-size: 54px;
+    line-height: 54px;
+    text-align: center;
+  }
 }
 
 .form__wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 36px;
+
+  @include mixin.tablet {
+    max-width: 440px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 30px;
+  }
 }
 
 .form__input {
@@ -32,4 +50,8 @@
 
 .form__button {
   color: var(--base-white);
+
+  @include mixin.tablet {
+    grid-column: span 2;
+  }
 }
